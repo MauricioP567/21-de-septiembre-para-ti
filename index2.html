@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flor Amarilla</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #mensaje1, #mensaje2 {
+            display: none; /* Oculto por defecto */
+        }
+
+        .top-right {
+            position: absolute; /* Posicionamiento absoluto */
+            top: 10px; /* Distancia desde la parte superior */
+            right: 10px; /* Distancia desde la derecha */
+            z-index: 1000; /* Asegura que esté por encima de otros elementos */
+        }
+
+        .top-right button,
+        .top-right p {
+            margin: 5px; /* Espaciado entre los elementos */
+            color: white; /* Color del texto */
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+            border: none; /* Sin borde */
+            padding: 10px; /* Espaciado interno */
+            border-radius: 5px; /* Bordes redondeados */
+        }
+    </style>
+</head>
+<body onclick="PlayAudio()">
+    <audio id="musica1" autoplay>
+        <source src="Sebastian Romero - Catorce.mp3" type="audio/mpeg">
+        <source src="Flores Amarillas2.ogv" type="audio">
+    </audio>
+    
+    <div class="sunflower">
+        <div class="flower_wrapper">
+            <div class="flower_stem"></div>
+            <div class="flower_center"></div>
+            <div class="flower_petal flower_petal-1"></div>
+            <div class="flower_petal flower_petal-2"></div>
+            <div class="flower_petal flower_petal-3"></div>
+            <div class="flower_petal flower_petal-4"></div>
+            <div class="flower_petal flower_petal-5"></div>
+            <div class="flower_petal flower_petal-6"></div>
+            <div class="flower_petal flower_petal-7"></div>
+            <div class="flower_petal flower_petal-8"></div>
+            <div class="flower_petal flower_petal-9"></div>
+            <div class="flower_petal flower_petal-10"></div>
+            <div class="flower_petal flower_petal-11"></div>
+            <div class="flower_petal flower_petal-12"></div>
+
+            <div class="flower_leaf flower_leaf-1"></div>
+            <div class="flower_leaf flower_leaf-2"></div>
+
+            <div class="flower_light flower_light-1"></div>
+            <div class="flower_light flower_light-2"></div>
+            <div class="flower_light flower_light-3"></div>
+            <div class="flower_light flower_light-4"></div>
+            <div class="flower_light flower_light-5"></div>
+            <div class="flower_light flower_light-6"></div>
+            <div class="flower_light flower_light-7"></div>
+            <div class="flower_light flower_light-8"></div>
+        </div>
+    </div>
+
+    <div class="light light-1"></div>
+    <div class="light light-2"></div>
+    <div class="light light-3"></div>
+    <div class="light light-4"></div>
+    <div class="light light-5"></div>
+    <div class="light light-6"></div>
+    <div class="light light-7"></div>
+    <div class="light light-8"></div>
+    <div class="light light-9"></div>
+    <div class="light light-10"></div>
+    <div class="light light-11"></div>
+    <div class="light light-12"></div>
+    
+    <p id="text">CON CARIÑO DE PAOLIN LIN LIN, CHATO CHATO, GUERRERO GUERRERO</p>
+
+    <div class="top-right">
+        <button onclick="mostrarComentario1()">Toca esta</button>
+        <p id="mensaje1">Buuuuuuuuuuu!</p>
+        <button id="boton2" style="display:none;" onclick="mostrarComentario2()">JAJAJAJA Ya, ahora sí, tócame</button>
+        <p id="mensaje2" style="display:none;">¡Te amo mi Meli hermosa!</p>
+    </div>
+
+</body>
+<script>
+    function PlayAudio(){
+        document.getElementById("musica1").play(); 
+    }
+
+    function mostrarComentario1() {
+        document.getElementById("mensaje1").style.display = "block"; // Muestra el primer comentario
+        document.getElementById("boton2").style.display = "block"; // Muestra el segundo botón
+    }
+
+    function mostrarComentario2() {
+        document.getElementById("mensaje2").style.display = "block"; // Muestra el segundo comentario
+    }
+</script>
+</html>
